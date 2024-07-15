@@ -1,19 +1,23 @@
-import React from 'react';
-import { useState } from 'react'
-import Form from './components/Form'
-import TodosList from './components/TodosList'
-import ToolList from './components/ToolList'
+import React, { useState } from 'react';
+import Form from './components/Form';
+import TodosList from './components/TodosList';
+import ToolList from './components/ToolList';
 import Draggable from 'react-draggable';
-import './App.css'
+import './App.css';
 
 function App() {
   const [input, setInput] = useState("");
   const [todos, setTodos] = useState([]);
-  const [editTodo, setEditTodo] = useState(null)
+  const [editTodo, setEditTodo] = useState(null);
 
   const creatorTagHandle = () => {
-    window.location = 'https://github.com/LAmollo/'
-  }
+    window.location = 'https://github.com/LAmollo/';
+  };
+
+  const handleSaveTodo = (newTodo) => {
+    // Add newTodo to the beginning of the todos list
+    setTodos([newTodo, ...todos]);
+  };
 
   return (
     <>
@@ -27,6 +31,7 @@ function App() {
           setTodos={setTodos}
           editTodo={editTodo}
           setEditTodo={setEditTodo}
+          onSaveTodo={handleSaveTodo} // Pass onSaveTodo handler to Form component
           className="form"
         />
         <TodosList
@@ -47,8 +52,8 @@ function App() {
           <p>Benson Amollo</p>
         </div>
       </Draggable>
-    </>
-  )
+      </>
+  );
 }
 
-export default App
+export default App;

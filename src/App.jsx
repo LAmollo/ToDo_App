@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AddTodoForm from "./components/AddTodoForm";
-import TodoList from "./components/TodoList";
+import TodoList from './components/TodoList';
 import { MdDarkMode, MdSunny } from "react-icons/md";
 
 function App() {

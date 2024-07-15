@@ -1,5 +1,5 @@
 import React from "react";
-import TodoList from "./TodoList";
+import TodoList from './components/TodoList';
 
 const TodoList = ({ todo, onEditTodo, onDeleteTodo, onToggleCompleted }) => {
   const reversedTodos = todos.slice().reverse();

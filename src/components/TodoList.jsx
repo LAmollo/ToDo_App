@@ -1,20 +1,20 @@
-// src/components/TodoList.jsx
-import React from 'react';
-import TodoItem from './TodoItem';
+import React from "react";
+import TodoList from "./TodoList";
 
-const TodoList = ({ todos, toggleComplete, deleteTodo, editTodo }) => {
+const TodoList = ({ todo, onEditTodo, onDeleteTodo, onToggleCompleted }) => {
+  const reversedTodos = todos.slice().reverse();
   return (
-    <div className="todo-list">
-      {todos.map((todo) => (
-        <TodoItem
+    <ul className=" ">
+      {reversedTodos.map((todo) => (
+        <Task
           key={todo.id}
-          todo={todo}
-          toggleComplete={toggleComplete}
-          deleteTodo={deleteTodo}
-          editTodo={editTodo}
+          task={todo}
+          onEditTodo={onEditTodo}
+          onDeleteTodo={onDeleteTodo}
+          onToggleCompleted={onToggleCompleted}
         />
       ))}
-    </div>
+    </ul>
   );
 };
 

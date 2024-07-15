@@ -10,11 +10,37 @@ const TodoItem = ({ todo, toggleComplete, deleteTodo, editTodo }) => {
     editTodo(todo.id, editText);
     setEditMode(false);
   };
-  return (
-    <div>
-      
-    </div>
-  )
-}
 
-export default TodoItem
+  return (
+    <div className={`todo-item ${editMode ? 'edit-mode' : ''}`}>
+      {editMode ? (
+        <>
+          <input
+            type="text"
+            value={editText}
+            onChange={(e) => setEditText(e.target.value)}
+          />
+          <button onClick={handleSave}>Save</button>
+        </>
+      ) : (
+        <>
+          <input
+            type="checkbox"
+            checked={todo.complete}
+            onChange={() => toggleComplete(todo.id)}
+          />
+          <span className={todo.complete ? 'completed' : ''}>{todo.text}</span>
+          <button
+            onClick={() => deleteTodo(todo.id)}
+            disabled={!todo.complete}
+          >
+            Delete
+          </button>
+          <button onClick={() => setEditMode(true)}>Edit</button>
+        </>
+      )}
+    </div>
+  );
+};
+
+export default TodoItem;

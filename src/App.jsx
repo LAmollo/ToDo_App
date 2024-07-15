@@ -31,10 +31,17 @@ const App = () => {
   };
 
   return (
-    <div>
-      
+    <div className="app">
+      <h1>Todo List</h1>
+      <TodoForm addTodo={addTodo} />
+      <TodoList
+        todos={todos}
+        toggleComplete={toggleComplete}
+        deleteTodo={deleteTodo}
+        editTodo={editTodo}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

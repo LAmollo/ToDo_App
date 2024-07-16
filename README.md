@@ -1,11 +1,11 @@
 React+Vite Todo App
-Welcome to the React Vite Todo App! This is a simple web application built using React and Vite that allows users to manage their tasks. You can create new tasks, mark tasks as completed, and delete tasks. The app utilizes local storage to persist task data, ensuring that your tasks remain even after you close the browser.
 
-Features
-Create New Tasks:
+This is a simple web application built using React and Vite that allows users to manage their tasks. You can create new tasks, mark tasks as completed, and delete tasks. The app utilizes local storage to persist task data, ensuring that your tasks remain even after you close the browser.
+
+Creating a task:
 Add new tasks to your to-do list by typing in the task description and pressing the "Add" button.
 
-Mark Completed Tasks:
+Completed Tasks:
 Once you've completed a task, simply click the checkbox next to the task to mark it as completed. The task will be visually distinguished to show its completion status.
 
 Delete Tasks:

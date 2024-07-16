@@ -32,6 +32,7 @@ Start the Vite development server
 Open in Browser:
 Once the development server is running, open your web browser and navigate to http://localhost:3000 to access the Todo App.
 
-Contributing
-Contributions are welcome! If you find a bug or have an idea for an improvement, feel free to open an issue or submit a pull request. Please make sure to follow the existing code style and conventions.
+
+Contributions: 
+If you find a bug or have an idea for an improvement, feel free to open an issue or submit a pull request. Please make sure to follow the existing code style and conventions.
 
